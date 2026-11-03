@@ -12,7 +12,8 @@ class CheckRole
     {
         if (!$request->user('api') || $request->user('api')->role !== $role) {
             return response()->json([
-                'message' => 'Forbidden. You do not have permission.'
+                'success' => false,
+                'message' => 'This action is unauthorized.',
             ], 403);
         }
 

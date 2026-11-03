@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Modules\Products\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
+use App\Modules\Products\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 

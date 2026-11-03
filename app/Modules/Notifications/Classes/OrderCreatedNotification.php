@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Notifications;
+namespace App\Modules\Notifications\Classes;
 
-use App\Models\Order;
+use App\Modules\Orders\Models\Order;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 

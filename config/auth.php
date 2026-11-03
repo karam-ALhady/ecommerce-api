@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use App\Modules\Users\Models\User;
 
 return [
 
@@ -43,7 +43,7 @@ return [
             'provider' => 'users',
         ],
 
-        'api' =>[
+        'api' => [
             'driver' => 'jwt',
             'provider' => 'users',
         ],

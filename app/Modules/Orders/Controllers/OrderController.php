@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Modules\Orders\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Order;
+use App\Modules\Orders\Models\Order;
 use Illuminate\Http\Request;
-use App\Models\Product;
+use App\Modules\Products\Models\Product;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
-use App\Notifications\OrderCreatedNotification;
+use App\Modules\Notifications\Classes\OrderCreatedNotification;
+
 class OrderController extends Controller
 {
     public function index(Request $request)
@@ -90,7 +91,4 @@ class OrderController extends Controller
             $order->load('items.product')
         );
     }
-
-
-
 }

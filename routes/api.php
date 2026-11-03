@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\UserController;
-use App\Http\Controllers\Api\ProductController;
-use App\Http\Controllers\Api\OrderController;
-use App\Http\Controllers\Api\NotificationController;
+use App\Modules\Users\Controllers\UserController;
+use App\Modules\Products\Controllers\ProductController;
+use App\Modules\Orders\Controllers\OrderController;
+use App\Modules\Notifications\Controllers\NotificationController;
+
 Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login'])
     ->middleware('throttle:5,1');
